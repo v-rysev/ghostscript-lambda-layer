@@ -1,6 +1,9 @@
 FROM lambci/lambda-base-2:build
-ENV GS_TAG=gs10020
-ENV GS_VERSION=10.02.0
+ARG GS_TAG
+ARG GS_VERSION
+
+ENV GS_TAG=$GS_TAG
+ENV GS_VERSION=$GS_VERSION
 
 RUN yum install -y wget
 
